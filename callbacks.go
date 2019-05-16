@@ -22,6 +22,15 @@ type VoiceRequest struct {
 	ToCountry     string
 }
 
+type CallStatusCallbackRequest struct {
+	VoiceRequest
+	CallbackSource string
+	CallDuration   int
+	Duration       int
+	SequenceNumber int
+	Timestamp      string
+}
+
 // DialActionRequest represents a request as a result of declaring an `action` URL on the Dial verb
 type DialActionRequest struct {
 	VoiceRequest
